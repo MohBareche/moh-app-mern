@@ -94,12 +94,10 @@ const loginUser = async (req, res) => {
         );
 
         if (!passwordCorrect)
-            return res
-                .status(401)
-                .json({
-                    message: "Courriel et/ou mot de passe non valide !",
-                    success: false,
-                });
+            return res.status(401).json({
+                message: "Courriel et/ou mot de passe non valide !",
+                success: false,
+            });
 
         // sign the token
         const token = jwt.sign(
