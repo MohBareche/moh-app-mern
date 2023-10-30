@@ -19,7 +19,7 @@ app.use("/auth", require("./routes/user.route"));
 app.use("/customer", require("./routes/customer.route"));
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
-    console.log("Connecté a la base de données avec succes...");
+    console.log("Connecté à la base de données avec succes...");
 });
 
 const PORT = process.env.PORT || 5000;
